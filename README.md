@@ -6,7 +6,7 @@
 
 This repository contains the following add-ons
 
-### [SML to HomA add-on](./sml)
+### [SML to HomA add-on](./sml-homa)
 ### [OpenV vcontrold to HomA add-on](./openv-homa)
 
 ![Supports aarch64 Architecture][aarch64-shield]

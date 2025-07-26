@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: SML to HomA MQTT add-on
+name: SML to HomA MQTT
 version: 0.1.4
 slug: sml-homa
 description: Connect a SML (Smart Message Language) meter using the HomA MQTT framework

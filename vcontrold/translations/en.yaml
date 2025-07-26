@@ -1,0 +1,61 @@
+configuration:
+  tty:
+    name: "TTY"
+    description: "The name of the tty used to communicate with the hardware."
+  refresh:
+    name: "Refresh rate"
+    description: "The waiting time between two executions."
+  device_id:
+    name: "Device ID"
+    description: "The device identifier. (2098 => V200KW2 , 2053 => GWG_VBEM, 20CB => VScotHO1 , 2094 => V200KW1)"
+  vcontrol_host:
+    name: "Vcontrold Hostname"
+    description: "vcontrold hostname to connect to (default: localhost)"
+  vcontrol_port:
+    name: "Vcontrold Port"
+    description: "vcontrold port to connect to (default: 3002)"
+  mqtt_host:
+    name: "MQTT Hostname"
+    description: "Hostname of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_port:
+    name: "MQTT Port"
+    description: "Port of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_user:
+    name: "MQTT User"
+    description: "User of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_password:
+    name: "MQTT Password"
+    description: "Password of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_topic:
+    name: "MQTT Topic"
+    description: "Topic where viessmann data are managed. Default is `openv`."
+  debug:
+    name: "Debug"
+    description: "Output of debug messages"
+  commands:
+    name: "Commands"
+    description: "List of commands to send. Format: Array of Objects:
+      `command` - Command, see vito.xml,
+      `type` - Typ of the value (FLOAT, FLOAT1 (one decimal place), INT or STRING),
+      `topic` - Topic to publish value,
+      `unit` (optional) - Unit name of the value,
+      `class` - Home Assistant class of the value (e.g. temperature, power_factor, enum),
+      `template` (optional) - Home Assistant for conveerting e.g. ENUM-values to readable stings.
+      Example:
+        - command: \"getTempRaumRedSollM2\"
+          type: \"FLOAT1\"
+          topic: \"Raumtemperatur reduziert soll\"
+          unit: \"°C\"
+          class: \"temperature\""
+  homa_system_id:
+    name: "HomA System ID"
+    description: "HomA System ID (Format: `123456-vito`)"
+  homa_device:
+    name: "HomA Device"
+    description: "HomA device name (default: `Vito`)"
+  homa_room:
+    name: "HomA Room"
+    description: "HomA room name (default: `Sensors`)"
+  hass_area:
+    name: "Home Assistant Area"
+    description: "Home Assistant area name (default: `Vito`)"

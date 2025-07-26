@@ -1,0 +1,147 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: OpenV vcontrold to HomA MQTT
+version: "0.1.6"
+slug: openv-homa
+description: Connect a Vito heating system using the HomA MQTT framework
+url: "https://github.com/hass-hmueller01/addon-openv-homa"
+# remove the image tag if you want to use it as a local add-on
+#image: "ghcr.io/hmueller01/{arch}-addon-openv-homa" # on https://github.com
+image: "hmueller01/homeassistant-addon-openv-homa-{arch}" # on https://hub.docker.com
+#image: "alexandreio/{arch}-homeassistant-vcontrol"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+options:
+  tty: "/dev/ttyUSB0"
+  refresh: 60
+  device_id: "20CB"
+  homa_system_id: "123456-vito"
+  homa_device: "Vito"
+  homa_room: "Sensors"
+  hass_area: "Vito"
+  debug: false
+  commands:
+    - command: "getTempRaumRedSollM2"
+      type: "FLOAT1"
+      topic: "Raumtemperatur reduziert soll"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempRaumNorSollM2"
+      type: "FLOAT1"
+      topic: "Raumtemperatur soll"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempRaumM2"
+      type: "FLOAT1"
+      topic: "Raumtemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempAtp"
+      type: "FLOAT1"
+      topic: "Aussentemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempKist"
+      type: "FLOAT1"
+      topic: "Kesseltemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempKsoll"
+      type: "FLOAT1"
+      topic: "Kesseltemperatur soll"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempVListM2"
+      type: "FLOAT1"
+      topic: "Vorlauftemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempVLsollM2"
+      type: "FLOAT1"
+      topic: "Vorlauftemperatur soll"
+      unit: "°C"
+      class: "temperature"
+    - command: "getTempStp"
+      type: "FLOAT1"
+      topic: "Warmwassertemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getLeistungIst"
+      type: "FLOAT1"
+      topic: "Leistung"
+      unit: "%"
+      class: "power_factor"
+    - command: "getPumpeStatusM2"
+      type: "STRING"
+      topic: "Heizkreispumpe"
+      class: "enum"
+      template: "{% set mapper = {'0':'AUS', '1':'EIN', '2':'Nacht'} %} {{ mapper[value] if value in mapper else 'Unknown ' + value }}"
+    - command: "getBetriebArtM2"
+      type: "STRING"
+      topic: "Betriebsart"
+      class: "enum"
+      #template: "{% set mapper = {'00':'AUS', '01':'WW', '02':'Heizen + WW', '03':'Dauernd Reduziert', '04':'Dauernd Normal'} %} {{ mapper[value] if value in mapper else 'Unknown ' + value }}"
+    - command: "getUmschaltventil"
+      type: "STRING"
+      topic: "Umschaltventil"
+      class: "enum"
+    - command: "getBrennerStarts"
+      type: "INT"
+      topic: "Brennerstarts"
+      class: "_int"
+    - command: "getBrennerStunden1"
+      type: "FLOAT"
+      topic: "Brennerstunden"
+      unit: "h"
+      class: "duration"
+    - command: "getTempAbgas"
+      type: "FLOAT1"
+      topic: "Abgastemperatur"
+      unit: "°C"
+      class: "temperature"
+    - command: "getSystemTime"
+      type: "STRING"
+      topic: "Vito Zeit"
+      class: "_datetime"
+schema:
+  tty: "str"
+  refresh: "int"
+  device_id: "str"
+  vcontrol_host: "str?"
+  vcontrol_port: "int?"
+  mqtt_host: "str?"
+  mqtt_port: "int?"
+  mqtt_user: "str?"
+  mqtt_password: "str?"
+  homa_system_id: "str"
+  homa_device: "str"
+  homa_room: "str?"
+  hass_area: "str?"
+  debug: "bool?"
+  commands:
+    - command: "str"
+      type: "str"
+      topic: "str"
+      unit: "str?"
+      class: "str"
+      template: "str?"
+usb: true
+apparmor: false
+ports:
+  3002/tcp: null
+ports_description:
+  3002/tcp: "Vcontrol deamon"
+services:
+  - mqtt:need
+devices:
+  - /dev/ttyUSB0
+  - /dev/ttyUSB1
+  - /dev/ttyUSB2
+  - /dev/ttyUSB3
+map: 
+  - type: config
+    read_only: False

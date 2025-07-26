@@ -1,0 +1,80 @@
+#!/usr/bin/with-contenv bashio
+# ==============================================================================
+# Start the sml2mqtt service
+# s6-overlay docs: https://github.com/just-containers/s6-overlay
+# ==============================================================================
+
+# Declare variables
+declare config_tty
+declare config_systemid
+declare config_device
+declare config_room
+declare config_area
+declare sml2mqtt_config_file
+
+# Fetch MQTT settings
+source /etc/services.d/get_mqtt_settings.sh
+
+# Import helper functions
+source /etc/services.d/mqtt_helper.sh
+
+# Get configuration options from user
+config_tty=$(bashio::config 'tty') && [[ "$config_tty" == "null" ]] && config_tty=""
+config_serial=$(bashio::config 'serial') && [[ "$config_serial" == "null" ]] && config_serial=""
+config_systemid=$(bashio::config 'homa_system_id') # e.g. 123456-energy
+config_device=$(bashio::config 'device_name') # e.g. Energie
+config_room=$(bashio::config 'homa_room') # e.g. Sensors
+config_area=$(bashio::config 'hass_area') # e.g. Energie
+
+sml2mqtt_config_file="/etc/sml2mqtt.yaml"
+
+# Check if sml2mqtt.yaml file exists
+if [ ! -f "$sml2mqtt_config_file" ]; then
+    bashio::exit.nok "$sml2mqtt_config_file not found. Exit here."
+fi
+
+# List UART USB devices and find the TTY (if not set)
+usb_ids=$(lsusb | grep -i UART | awk '{print $6}')
+for usb_id in $usb_ids; do
+    vendor="${usb_id:0:4}"
+    product="${usb_id:5:4}"
+    devpath=`dmesg | grep "idVendor=$vendor, idProduct=$product" | tail -1 | sed "s/.* usb \(.*\): .*/\1/"`
+    serial=$(dmesg | grep "usb $devpath: SerialNumber:" | tail -1 | sed "s/.* SerialNumber: //")
+    product=$(dmesg | grep "usb $devpath: Product:" | tail -1 | sed "s/.* Product: //")
+    device="/dev/"$(dmesg | grep -E "usb $devpath: .* attached to" | tail -1 | sed "s/.* attached to //")
+    bashio::log.info "Found UART device: $usb_id - $product, S/N $serial at $device"
+    if [[ -z "$config_tty" && -n "$config_serial" && "$serial" == "$config_serial" ]]; then
+        config_tty="$device"
+        bashio::log.info "Found TTY: $config_tty for serial $config_serial"
+    fi
+done
+
+# Check if TTY is set
+if [[ -z "$config_tty" ]]; then
+    bashio::exit.nok "TTY is not set. Please set the TTY in the configuration or set the Serial Number to auto-detect the TTY."
+else
+    bashio::log.info "Using TTY: $config_tty"
+fi
+
+# Setup HomA room and device meta
+publish_topic "$(get_homa_topic meta/room)" "$config_room"
+publish_topic "$(get_homa_topic meta/name)" "$config_device"
+
+# Setup Home Assistant
+model_name="IR Kopf"
+manufacturer="volkszaehler.org"
+sw_version=$(bashio::addon.version)
+homeassistant_config "Strom Leistung" "Current Power" "power" "W"
+homeassistant_config "Strom Energie" "Total Energy" "energy" "kWh"
+
+# Update the sml2mqtt configuration file
+sed -i "s#host:.*#host: $MQTT_HOST#g" "$sml2mqtt_config_file"
+sed -i "s#port:.*#port: $MQTT_PORT#g" "$sml2mqtt_config_file"
+sed -i "s#username:.*#username: $MQTT_USER#g" "$sml2mqtt_config_file"
+sed -i "s#password:.*#password: $MQTT_PASSWORD#g" "$sml2mqtt_config_file"
+sed -i "s#topic:.*#topic: /devices/$config_systemid/controls#g" "$sml2mqtt_config_file"
+sed -i "s#device:.*#device: $config_tty#g" "$sml2mqtt_config_file"
+
+# Start the sml2mqtt service
+bashio::log.info "Starting sml2mqtt..."
+exec sml2mqtt -c "$sml2mqtt_config_file"

@@ -30,13 +30,14 @@ jobs:
               git clone --depth 1 $url temp_repo
 
               # copy relevant files (e.g., everything except .git)
-              #rsync -av --exclude='.git' temp_repo/ "$dir"
+              rsync -av --exclude='.git' --exclude='*/' "temp_repo/$dir" "$dir"
 
               rm -rf temp_repo
             fi
           done
 
       - name: Commit and push changes
+        if: false
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"

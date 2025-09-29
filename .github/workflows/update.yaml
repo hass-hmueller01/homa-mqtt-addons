@@ -15,7 +15,7 @@ jobs:
 
       - name: Install yq for YAML parsing
         run: |
-          sudo apt-get update
+          #sudo apt-get update
           sudo apt-get install -y yq git
 
       - name: Iterate over subdirectories and update
@@ -24,7 +24,7 @@ jobs:
             if [ -f "$dir/config.yaml" ]; then
               url=$(yq '.url' "$dir/config.yaml")
               echo "Updating $dir from $url"
-              git clone --depth 1 "$url" temp_repo
+              git clone --depth 1 $url temp_repo
 
               # copy relevant files (e.g., everything except .git)
               #rsync -av --exclude='.git' temp_repo/ "$dir"

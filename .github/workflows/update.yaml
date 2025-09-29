@@ -6,6 +6,9 @@ on:
   #schedule:
   #  - cron: '0 3 * * *'  # daily at 3 AM
 
+permissions:
+  contents: write
+
 jobs:
   update-addons:
     runs-on: ubuntu-latest
@@ -39,4 +42,4 @@ jobs:
           git config --global user.email "actions@github.com"
           git add .
           git commit -m "Automated update from config.yaml URLs" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/hass-hmueller01/homa-mqtt-addons.git

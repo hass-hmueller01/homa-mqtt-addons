@@ -22,7 +22,7 @@ jobs:
         run: |
           for dir in */ ; do
             if [ -f "$dir/config.yaml" ]; then
-              url=$(yq -a '.url' "$dir/config.yaml")
+              url=$(yq -r '.url' "$dir/config.yaml")
               echo "Updating $dir from $url"
               git clone --depth 1 $url temp_repo
 

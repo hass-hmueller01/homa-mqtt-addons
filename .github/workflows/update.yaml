@@ -1,5 +1,4 @@
-
-name: Update Addon Repos
+name: Update add-on repos
 
 on:
   workflow_dispatch:
@@ -37,7 +36,6 @@ jobs:
           done
 
       - name: Commit and push changes
-        if: false
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"

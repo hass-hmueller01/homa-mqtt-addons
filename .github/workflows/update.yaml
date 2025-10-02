@@ -17,7 +17,8 @@ jobs:
 
       - name: Install yq for YAML parsing
         run: |
-          #sudo apt-get update
+          sudo apt-get remove -y man-db
+          sudo apt-get update
           sudo apt-get install -y yq git
 
       - name: Iterate over subdirectories and update files
@@ -40,20 +41,18 @@ jobs:
           for dir in */ ; do
             if [ -f "$dir/config.yaml" ]; then
               addon_name=$(basename "$dir")
-              old_version=$(grep '^\['"${addon_name}"'\]:' README.md | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+')
+              old_version=$(grep "^\[${addon_name}\]:" README.md | grep -oP 'v\K[0-9]+\.[0-9]+\.[0-9]+')
               new_version=$(yq -r '.version' "$dir/config.yaml")
-              echo "Updating $addon_name from $old_version to $new_version"
               if [ "$old_version" != "$new_version" ]; then
-                echo "Version change for $addon_name, updating README.md badges"
-                # Update README.md badge and link for this add-on
-                #sed -i'' -E "s#(\[${addon_name}\]: )https://github.com/hass-hmueller01/addon-${ADDON_NAME}/tree/v[0-9]+\.[0-9]+\.[0-9]+#\1${ADDON_URL}#" README.md
-                #sed -i'' -E "s#(\[${addon_name}-version-shield\]: )https://img.shields.io/badge/version-v[0-9]+\.[0-9]+\.[0-9]+-blue.svg#\1${ADDON_SHIELD}#" README.md
-              fi
-
+                echo "Updating $addon_name README.md badges from $old_version to $new_version"
+                sed -i'' -E "s#(\[${addon_name}\]:[^v]*v)${old_version}#\1${new_version}#" README.md
+                sed -i'' -E "s#(\[${addon_name}-version-shield\]:[^v]*v)${old_version}(-.*\.svg)#\1${new_version}\2#" README.md
             fi
           done
+          git diff
 
       - name: Commit and push changes
+        if: false
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"

@@ -56,8 +56,8 @@ Notes to developers after forking or using the github template feature:
 
 [sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v0.1.4
 [sml-homa-version-shield]: https://img.shields.io/badge/version-v0.1.4-blue.svg
-[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.6
-[openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.6-blue.svg
+[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.8
+[openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.8-blue.svg
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg

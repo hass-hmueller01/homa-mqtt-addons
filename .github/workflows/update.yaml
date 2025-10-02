@@ -17,9 +17,9 @@ jobs:
 
       - name: Install yq for YAML parsing
         run: |
-          #sudo apt-get remove -y man-db
+          sudo apt-get remove -y man-db
           #sudo apt-get update
-          sudo apt-get install -y -o Dpkg::Triggers::Enable=false yq git
+          sudo apt-get install -y yq git
 
       - name: Iterate over subdirectories and update files
         run: |
@@ -45,8 +45,8 @@ jobs:
               new_version=$(yq -r '.version' "$dir/config.yaml")
               if [ "$old_version" != "$new_version" ]; then
                 echo "Updating $addon_name README.md badges from $old_version to $new_version"
-                sed -i'' -E "s#(\[${addon_name}\]:[^v]*v)${old_version}#\1${new_version}#" README.md
-                sed -i'' -E "s#(\[${addon_name}-version-shield\]:[^v]*v)${old_version}(-.*\.svg)#\1${new_version}\2#" README.md
+                sed -i'' -E "s#(\[${addon_name}\]:.*v)${old_version}#\1${new_version}#" README.md
+                sed -i'' -E "s#(\[${addon_name}-version-shield\]:.*v)${old_version}(-.*\.svg)#\1${new_version}\2#" README.md
               fi
             fi
           done

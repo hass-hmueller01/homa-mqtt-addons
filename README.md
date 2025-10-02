@@ -37,6 +37,15 @@ This repository contains the following add-ons
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
+### [RESOL VBus to HomA add-on][resol-vbus-homa]
+
+![Latest Version][resol-vbus-homa-version-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
 <!--
 Notes to developers after forking or using the github template feature:
 - While developing comment out the 'image' key from 'example/config.yaml' to make the supervisor build the addon
@@ -58,6 +67,8 @@ Notes to developers after forking or using the github template feature:
 [sml-homa-version-shield]: https://img.shields.io/badge/version-v0.1.4-blue.svg
 [openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.8
 [openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.8-blue.svg
+[resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v0.1.5
+[resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg

@@ -1,0 +1,44 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: RESOL VBus to HomA MQTT
+version: 0.1.5
+slug: resol-vbus-homa
+description: Connect a RESOL VBus system using the HomA MQTT framework
+url: https://github.com/hass-hmueller01/addon-resol-vbus-homa
+# remove the image tag if you want to use it as a local add-on
+image: "hmueller01/homeassistant-addon-resol-vbus-homa-{arch}" # on https://hub.docker.com
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+init: false
+options:
+  device_name: "DeltaSol BX"
+  tty: "/dev/ttyAMA0"
+  refresh: 60
+  homa_system_id: "123456-solar"
+  homa_device: "Solar"
+  homa_room: "Sensors"
+  hass_area: "Solar"
+  debug: false
+schema:
+  device_name: "str"
+  tty: "str"
+  refresh: "int"
+  homa_system_id: "str"
+  homa_device: "str"
+  homa_room: "str"
+  hass_area: "str"
+  mqtt_host: "str?"
+  mqtt_port: "int?"
+  mqtt_user: "str?"
+  mqtt_password: "str?"
+  mqtt_ca_certs: "str?"
+  debug: "bool"
+services:
+  - mqtt:need
+devices:
+  - /dev/ttyAMA0
+uart: true
+#apparmor: false

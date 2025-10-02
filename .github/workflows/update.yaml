@@ -2,8 +2,8 @@ name: Update add-on repos
 
 on:
   workflow_dispatch:
-  #schedule:
-  #  - cron: '0 3 * * *'  # daily at 3 AM
+  schedule:
+    - cron: '0 3 * * *'  # daily at 3 AM
 
 permissions:
   contents: write

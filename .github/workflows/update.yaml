@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout homa-mqtt-addons
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
 
       - name: Install yq for YAML parsing
         run: |

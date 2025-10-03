@@ -19,6 +19,15 @@ https://github.com/hass-hmueller01/homa-mqtt-addons
 
 This repository contains the following add-ons
 
+### [MQTT Min/Max saver HomA add-on][min-max-saver-homa]
+
+![Latest Version][min-max-saver-homa-version-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
 ### [OpenV vcontrold to HomA add-on][openv-homa]
 
 ![Latest Version][openv-homa-version-shield]
@@ -63,6 +72,8 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
+[min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v0.1.3-blue.svg
+[min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver/tree/v0.1.3
 [openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.8-blue.svg
 [openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.8
 [resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg

@@ -1,0 +1,61 @@
+configuration:
+  tty:
+    name: "TTY"
+    description: "Name des seriellen Ports / TTY, um mit dem Gerät zu kommunizieren."
+  refresh:
+    name: "Refresh rate"
+    description: "Aktualisierungrate / Wartezeit zwischen zwei Aufrufen des vclients."
+  device_id:
+    name: "Device ID"
+    description: "Viessmann Gerätekennung (2098 => V200KW2 , 2053 => GWG_VBEM, 20CB => VScotHO1 , 2094 => V200KW1)"
+  vcontrol_host:
+    name: "Vcontrold Host"
+    description: "vcontrold host für die Verbindung (default: localhost)"
+  vcontrol_port:
+    name: "Vcontrold Port"
+    description: "vcontrold für die Verbindung (default: 3002)"
+  mqtt_host:
+    name: "MQTT Hostname"
+    description: "Hostname eines remote MQTT brokers. Falls leer wird der interne MQTT Broker verwendet"
+  mqtt_port:
+    name: "MQTT Port"
+    description: "Port eines remote MQTT brokers. Falls leer wird der interne MQTT Broker verwendet"
+  mqtt_user:
+    name: "MQTT User"
+    description: "User eines remote MQTT brokers. Falls leer wird der default username des internen MQTT Broker verwendet"
+  mqtt_password:
+    name: "MQTT Password"
+    description: "Password eines remote MQTT brokers. Falls leer wird der interne MQTT Broker verwendet"
+  mqtt_topic:
+    name: "MQTT Topic"
+    description: "Topic unter dem die Viessmann Daten verwalten werden. Default `openv`"
+  debug:
+    name: "Debug"
+    description: "Ausgabe von Debug-Nachrichten"
+  commands:
+    name: "Commands"
+    description: "Befehlsliste, die an das Gerät gesendet werden soll. Format: Array aus den Objekten:
+      `command` - Kommando aus der vito.xml,
+      `type` - Typ des Wertes (FLOAT, FLOAT1 (eine Stelle nach dem Komma), INT oder STRING),
+      `topic` - Topic unter dem der Wert veröffentlicht wird,
+      `unit` (optional) - Einheit des Wertes,
+      `class` - Home Assistant Klasse des Wertes (z.B. temperature, power_factor, enum),
+      `template` (optional) - Home Assistant für die Umwandlung von ENUM-Werten in lesbare Strings.
+      Beispiel:
+        `- command: \"getTempRaumRedSollM2\"
+        type: \"FLOAT1\"
+        topic: \"Raumtemperatur reduziert soll\"
+        unit: \"°C\"
+        class: \"temperature\"`"
+  homa_system_id:
+    name: "HomA System ID"
+    description: "HomA System ID (Format: `123456-vito`)"
+  homa_device:
+    name: "HomA Device"
+    description: "HomA Gerätename (default: `Vito`)"
+  homa_room:
+    name: "HomA Room"
+    description: "HomA Raumname in dem die Daten dargestellt werden sollen (default: `Sensors`)"
+  hass_area:
+    name: "Home Assistant Area"
+    description: "Home Assistant Area Name (default: `Vito`)"

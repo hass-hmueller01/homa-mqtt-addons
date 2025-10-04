@@ -23,7 +23,7 @@ The add-on supports the internal (Home Assistant) or an external MQTT broker. To
 
 You can modify the subscribed topic id `<systemId>` by setting _"HomA System ID"_.
 
-Note: To use the serial GPIO ports edit the
+Note: To use the serial GPIO 14/15 ports for `/dev/ttyAMA0` edit the
 `/mnt/boot/config.txt` file on your RPi and set
 ```
 enable_uart=1

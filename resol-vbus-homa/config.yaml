@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: RESOL VBus to HomA MQTT
-version: 0.1.5
+version: 0.1.6
 slug: resol-vbus-homa
 description: Connect a RESOL VBus system using the HomA MQTT framework
 url: https://github.com/hass-hmueller01/addon-resol-vbus-homa

@@ -30,7 +30,7 @@ jobs:
               git clone --depth 1 $url temp_repo
 
               # copy relevant files (e.g., everything except .git)
-              rsync -av --exclude='.git' --exclude='*/' --include='translations/' "temp_repo/$dir" "$dir"
+              rsync -av --exclude='.git' --include='translations/' --exclude='*/' "temp_repo/$dir" "$dir"
 
               rm -rf temp_repo
             fi

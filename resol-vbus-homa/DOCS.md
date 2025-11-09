@@ -12,7 +12,7 @@ These topics are supported:
 - Speichertemperatur Mitte
 - Ruecklauftemperatur
 - Solarpumpe Drehzahl
-- Umschaltventil Position
+- Umschaltventil Position (Heizung = 0%, Kessel = 100%)
 - Solar Zeit
 
 ## Configuration

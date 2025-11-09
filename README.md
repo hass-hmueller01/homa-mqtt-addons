@@ -74,8 +74,8 @@ Notes to developers after forking or using the github template feature:
 
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg
 [min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v0.1.5
-[openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.9-blue.svg
-[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.9
+[openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.10-blue.svg
+[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.10
 [resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v0.1.7-blue.svg
 [resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v0.1.7
 [sml-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg

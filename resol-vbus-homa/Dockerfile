@@ -14,7 +14,6 @@ RUN \
         paho-mqtt pyserial && \
     cd /root && \
     git clone https://github.com/hmueller01/resol-vbus-python.git && \
-    git -C resol-vbus-python checkout fix-python-3.13-error && \
     apk del --rdepends git && \
     rm -rf /var/cache/apk/*
 

@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: RESOL VBus to HomA MQTT
-version: 0.1.8
+version: 1.0.0
 slug: resol-vbus-homa
 description: Connect a RESOL VBus system using the HomA MQTT framework
 url: https://github.com/hass-hmueller01/addon-resol-vbus-homa
@@ -9,9 +9,6 @@ image: "hmueller01/homeassistant-addon-resol-vbus-homa-{arch}" # on https://hub.
 arch:
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
 init: false
 options:
   device_name: "DeltaSol BX"

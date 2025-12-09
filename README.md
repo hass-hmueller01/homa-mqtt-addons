@@ -72,14 +72,14 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
-[min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg
-[min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v0.1.5
-[openv-homa-version-shield]: https://img.shields.io/badge/version-v0.1.10-blue.svg
-[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v0.1.10
-[resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v0.1.8-blue.svg
-[resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v0.1.8
-[sml-homa-version-shield]: https://img.shields.io/badge/version-v0.1.5-blue.svg
-[sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v0.1.5
+[min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v1.0.0
+[openv-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v1.0.0
+[resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v1.0.0
+[sml-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v1.0.0
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg

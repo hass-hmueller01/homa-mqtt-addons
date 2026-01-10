@@ -19,6 +19,15 @@ https://github.com/hass-hmueller01/homa-mqtt-addons
 
 This repository contains the following add-ons
 
+### [Gas meter HomA add-on][gas-meter-homa]
+
+![Latest Version][gas-meter-homa-version-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
 ### [MQTT Min/Max saver HomA add-on][min-max-saver-homa]
 
 ![Latest Version][min-max-saver-homa-version-shield]
@@ -72,6 +81,8 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
+[gas-meter-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
+[gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.0.0
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
 [min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v1.1.0
 [openv-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg

@@ -85,8 +85,8 @@ Notes to developers after forking or using the github template feature:
 [gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.1.0
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
 [min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v1.1.0
-[openv-homa-version-shield]: https://img.shields.io/badge/version-v1.0.1-blue.svg
-[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v1.0.1
+[openv-homa-version-shield]: https://img.shields.io/badge/version-v2.0.0-blue.svg
+[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v2.0.0
 [resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
 [resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v1.0.0
 [sml-homa-version-shield]: https://img.shields.io/badge/version-v1.3.0-blue.svg

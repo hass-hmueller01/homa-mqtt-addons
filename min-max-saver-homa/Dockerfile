@@ -3,6 +3,8 @@ ARG BUILD_ARCH=amd64
 ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:latest
 FROM $BUILD_FROM
 
+ENV LOG_TIMESTAMP="%Y-%m-%d %T"
+
 RUN echo "alias l='ls --color=auto -alF'" >> /root/.bashrc
 
 # Install dependencies
@@ -21,7 +23,7 @@ RUN \
     pip3 install -r requirements.txt
 
 # Cleanup
-RUN apk del git && \
+RUN apk del --rdepends git && \
     apk cache clean && \
     rm -rf /var/cache/apk/* /tmp/* /root/.cache/pip
 

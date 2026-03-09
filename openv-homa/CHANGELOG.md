@@ -7,6 +7,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+- Global declaration of used files
+
+## [2.0.0] - 2026-02-14
+### Added
+- Implemented writing values (vclient_sub)
+- Added new unit ReturnStatusText (RST) in vcontrold.xml
+- Added get/setTempWWsoll, get/setBetriebSparM2, get/setBetriebPartyM2
+### Changed
+- Set LOG_TIMESTAMP to %Y-%m-%d %T
+- Changed unit of get/setBetriebSparM2, get/setBetriebPartyM2 to ReturnStatusText (RST)
 
 ## [1.0.1] - 2026-01-18
 ### Changed

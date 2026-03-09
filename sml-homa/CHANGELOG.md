@@ -7,8 +7,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+
+## [1.3.0] - 2026-02-01
+### Changed
+- Increased retry timeout to 20s
+- Set LOG_TIMESTAMP to %Y-%m-%d %T
+- Added LOG_TIMESTAMP of all output messages in sml2mqtt
+
+## [1.2.0] - 2026-01-22
+### Added
+- OBIS 2.8.0 messages (Total Energy Feed-in)
+### Fixed
+- Removed "warning: variable length arrays in C++" in SML.cpp by using `std::vector<unsigned char> buf(max_len)`
+
+## [1.1.1] - 2026-01-21
+### Fixed
+- fatal: cannot change to '/usr/local/src': No such file or directory
+
+## [1.1.0] - 2026-01-20
 ### Changed
 - Updated log output of sml2mqtt
+- Added "-v" to sml2mqtt if debug enabled
+- Using https://github.com/hass-hmueller01/hass-addon-helper.git
+- Fixed crash in main.cpp (illegal delete of stack pointer)
 
 ## [1.0.0] - 2025-12-08
 - Removed armhf, armv7, i386 architectures as removed in home-assistant/builder 2025.11.0

@@ -92,16 +92,16 @@ Notes to developers after forking or using the github template feature:
 
 [apsystems-ez1-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
 [apsystems-ez1-homa]: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa/tree/v1.1.0
-[gas-meter-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
-[gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.1.0
+[gas-meter-homa-version-shield]: https://img.shields.io/badge/version-v1.2.0-blue.svg
+[gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.2.0
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
 [min-max-saver-homa]: https://github.com/hass-hmueller01/addon-min-max-saver-homa/tree/v1.1.0
-[openv-homa-version-shield]: https://img.shields.io/badge/version-v1.0.1-blue.svg
-[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v1.0.1
+[openv-homa-version-shield]: https://img.shields.io/badge/version-v2.0.0-blue.svg
+[openv-homa]: https://github.com/hass-hmueller01/addon-openv-homa/tree/v2.0.0
 [resol-vbus-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
 [resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v1.0.0
-[sml-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
-[sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v1.0.0
+[sml-homa-version-shield]: https://img.shields.io/badge/version-v1.3.0-blue.svg
+[sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v1.3.0
 
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

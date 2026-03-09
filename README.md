@@ -19,6 +19,15 @@ https://github.com/hass-hmueller01/homa-mqtt-addons
 
 This repository contains the following add-ons
 
+### [APsystems EZ1 HomA add-on][apsystems-ez1-homa]
+
+![Latest Version][apsystems-ez1-homa-version-shield]
+![Supports aarch64 Architecture][aarch64-shield]
+![Supports amd64 Architecture][amd64-shield]
+![Supports armhf Architecture][armhf-shield]
+![Supports armv7 Architecture][armv7-shield]
+![Supports i386 Architecture][i386-shield]
+
 ### [Gas meter HomA add-on][gas-meter-homa]
 
 ![Latest Version][gas-meter-homa-version-shield]
@@ -81,6 +90,8 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
+[apsystems-ez1-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
+[apsystems-ez1-homa]: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa/tree/v1.1.0
 [gas-meter-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
 [gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.1.0
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg
@@ -91,6 +102,7 @@ Notes to developers after forking or using the github template feature:
 [resol-vbus-homa]: https://github.com/hass-hmueller01/addon-resol-vbus-homa/tree/v1.0.0
 [sml-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-blue.svg
 [sml-homa]: https://github.com/hass-hmueller01/addon-sml-homa/tree/v1.0.0
+
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg

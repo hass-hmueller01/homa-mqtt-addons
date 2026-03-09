@@ -1,0 +1,43 @@
+configuration:
+  device_name:
+    name: "APsystems EZ1 Name"
+    description: "APsystems EZ1 device name. (default: `Solar PV Balkonkraftwerk`)"
+  homa_room:
+    name: "HomA Room"
+    description: "HomA room name (default: `Sensors`)"
+  hass_area:
+    name: "Home Assistant Area"
+    description: "Home Assistant area name (default: `Energie`)"
+  aps_ecu_ip:
+    name: "APsystems ECU IP"
+    description: "IP address of the APsystems ECU"
+  aps_ecu_port:
+    name: "APsystems ECU Port"
+    description: "Port number for the APsystems ECU (default: `8050`)"
+  aps_ecu_update_interval:
+    name: "APsystems ECU Update Interval"
+    description: "Update interval for the APsystems ECU in seconds (default: `10`)"
+  latitude:
+    name: "Latitude"
+    description: "Latitude of the location for sunrise and sunset calculations (default: `52.5162`)"
+  longitude:
+    name: "Longitude"
+    description: "Longitude of the location for sunrise and sunset calculations (default: `13.3889`)"
+  mqtt_host:
+    name: "MQTT Hostname"
+    description: "Hostname of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_port:
+    name: "MQTT Port"
+    description: "Port of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_user:
+    name: "MQTT User"
+    description: "User of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_password:
+    name: "MQTT Password"
+    description: "Password of a remote MQTT broker. If empty, the default internal MQTT broker will be used."
+  mqtt_ca_certs:
+    name: "MQTT CA Certificates"
+    description: "CA Certificates file name. Leave empty for port 1883."
+  debug:
+    name: "Debug"
+    description: "Output of debug messages"

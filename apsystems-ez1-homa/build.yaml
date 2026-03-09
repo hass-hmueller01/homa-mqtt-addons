@@ -1,0 +1,10 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
+# https://github.com/home-assistant/docker-base
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base-python:latest"
+  amd64: "ghcr.io/home-assistant/amd64-base-python:latest"
+labels:
+  org.opencontainers.image.title: "Home Assistant Add-on: HomA MQTT APsystems EZ1"
+  org.opencontainers.image.description: "HomA MQTT APsystems EZ1 add-on."
+  org.opencontainers.image.source: "https://github.com/hass-hmueller01/addon-apsystems-ez1-homa"
+  org.opencontainers.image.licenses: "MIT License"

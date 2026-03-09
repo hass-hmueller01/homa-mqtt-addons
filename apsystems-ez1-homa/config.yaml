@@ -1,0 +1,43 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: APsystems EZ1 to HomA MQTT
+version: 1.0.0-alpha.1
+slug: apsystems-ez1-homa
+description: An APsystems EZ1 monitor for the HomA MQTT framework
+url: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa
+# remove the image tag if you want to use it as a local add-on
+image: "hmueller01/homeassistant-addon-apsystems-ez1-homa-{arch}" # on https://hub.docker.com
+arch:
+  - aarch64
+  - amd64
+init: false
+permissions:
+  homeassistant: read
+  supervisor: read
+  core: read
+options:
+  device_name: "Solar PV Balkonkraftwerk"
+  homa_room: "Sensors"
+  hass_area: "Energie"
+  aps_ecu_ip: "192.168.1.2"
+  aps_ecu_update_interval: 10
+  latitude: 52.5162
+  longitude: 13.3889
+#  timezone: "Europe/Berlin"
+  debug: false
+schema:
+  device_name: "str"
+  homa_room: "str"
+  hass_area: "str"
+  aps_ecu_ip: "str"
+  aps_ecu_port: "int?"
+  aps_ecu_update_interval: "int?"
+  latitude: "float?"
+  longitude: "float?"
+  timezone: "str?"
+  mqtt_host: "str?"
+  mqtt_port: "int?"
+  mqtt_user: "str?"
+  mqtt_password: "str?"
+  debug: "bool"
+services:
+  - mqtt:need

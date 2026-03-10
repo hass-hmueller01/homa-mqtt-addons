@@ -16,13 +16,7 @@ configuration:
     description: "Portnummer für die APsystems ECU (Standard: `8050`)"
   aps_ecu_update_interval:
     name: "APsystems ECU Aktualisierungsintervall"
-    description: "Aktualisierungsintervall für die APsystems ECU in Sekunden (Standard: `10`)"
-  latitude:
-    name: "Breitengrad"
-    description: "Breitengrad des Standorts für Sonnenauf- und -untergangsberechnungen (Standard: `52.5162`)"
-  longitude:
-    name: "Längengrad"
-    description: "Längengrad des Standorts für Sonnenauf- und -untergangsberechnungen (Standard: `13.3889`)"
+    description: "Aktualisierungsintervall für die APsystems ECU in Sekunden (Standard: `15`, Minimum: `10`)"
   mqtt_host:
     name: "MQTT Hostname"
     description: "Hostname eines remote MQTT brokers. Falls leer wird der interne MQTT Broker verwendet"

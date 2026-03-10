@@ -16,13 +16,7 @@ configuration:
     description: "Port number for the APsystems ECU (default: `8050`)"
   aps_ecu_update_interval:
     name: "APsystems ECU Update Interval"
-    description: "Update interval for the APsystems ECU in seconds (default: `10`)"
-  latitude:
-    name: "Latitude"
-    description: "Latitude of the location for sunrise and sunset calculations (default: `52.5162`)"
-  longitude:
-    name: "Longitude"
-    description: "Longitude of the location for sunrise and sunset calculations (default: `13.3889`)"
+    description: "Update interval for the APsystems ECU in seconds (default: `15`, minimum: `10`)"
   mqtt_host:
     name: "MQTT Hostname"
     description: "Hostname of a remote MQTT broker. If empty, the default internal MQTT broker will be used."

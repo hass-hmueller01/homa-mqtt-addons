@@ -17,6 +17,9 @@ configuration:
   aps_ecu_update_interval:
     name: "APsystems ECU Aktualisierungsintervall"
     description: "Aktualisierungsintervall für die APsystems ECU in Sekunden (Standard: `15`, Minimum: `10`)"
+  aps_ecu_stop_at_night:
+    name: "APsystems ECU Stop bei Nacht"
+    description: "Stoppt Aktualisierungen bei Nacht (Standard: `false`)"
   mqtt_host:
     name: "MQTT Hostname"
     description: "Hostname eines remote MQTT brokers. Falls leer wird der interne MQTT Broker verwendet"

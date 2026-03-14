@@ -90,8 +90,8 @@ Notes to developers after forking or using the github template feature:
 - Do awesome stuff!
  -->
 
-[apsystems-ez1-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-alpha.2-alpha.2-alpha.2-alpha.2-alpha.1-blue.svg
-[apsystems-ez1-homa]: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa/tree/v1.0.0-alpha.2-alpha.2-alpha.2-alpha.2-alpha.1
+[apsystems-ez1-homa-version-shield]: https://img.shields.io/badge/version-v1.0.0-alpha.3-alpha.2-alpha.2-alpha.2-alpha.2-alpha.1-blue.svg
+[apsystems-ez1-homa]: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa/tree/v1.0.0-alpha.3-alpha.2-alpha.2-alpha.2-alpha.2-alpha.1
 [gas-meter-homa-version-shield]: https://img.shields.io/badge/version-v1.2.0-blue.svg
 [gas-meter-homa]: https://github.com/hass-hmueller01/addon-gas-meter-homa/tree/v1.2.0
 [min-max-saver-homa-version-shield]: https://img.shields.io/badge/version-v1.1.0-blue.svg

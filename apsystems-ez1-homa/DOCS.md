@@ -42,9 +42,11 @@ $ python -m apsystems_ez1_mqtt -r
 
 The add-on supports the internal (Home Assistant) or an external MQTT broker. To configure the external MQTT broker you have to activate the _"Show unused optional configuration options"_.
 
-You can modify the subscribed topic id `<systemId>` by setting _"HomA System ID"_.
+You need to set the _"APsystems ECU IP"_ on which the APsystems-EZ1-API can be accessed.
 
-The _GPIO Pin_ counts the raising edges of the gas pulses. The _calorific value_ is used to convert the volume (m³) to an energy (kWh).
+The settings for `APS_ECU_TIMEZONE`, `APS_ECU_POSITION_LAT` and `APS_ECU_POSITION_LNG` are querried from the Home Assistant core API (see Settings > System > Home information > Location / Region).
+
+The _"Update Interval"_ should be not lower than 10s.
 
 ## Internal documentation
 

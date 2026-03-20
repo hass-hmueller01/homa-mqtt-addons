@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: APsystems EZ1 to HomA MQTT
-version: 1.0.0-alpha.5
+version: 1.0.0
 slug: apsystems-ez1-homa
 description: An APsystems EZ1 monitor for the HomA MQTT framework
 url: https://github.com/hass-hmueller01/addon-apsystems-ez1-homa
@@ -26,8 +26,8 @@ schema:
   hass_area: "str"
   aps_ecu_ip: "str"
   aps_ecu_port: "int?"
-  aps_ecu_update_interval: "int?"
-  aps_ecu_stop_at_night: "bool?"
+  aps_ecu_update_interval: "int"
+  aps_ecu_stop_at_night: "bool"
   mqtt_host: "str?"
   mqtt_port: "int?"
   mqtt_user: "str?"

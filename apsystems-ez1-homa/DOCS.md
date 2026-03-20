@@ -21,7 +21,7 @@ This work is based on [aps2mqtt (v1.2.0)](https://github.com/fligneul/aps2mqtt).
 
 ## Installation
 
-The access to the local API is done by the [APsystems-EZ1-API](https://github.com/SonnenladenGmbH/APsystems-EZ1-API). Please configure the EZ1 inverter as described there.
+The access to the local API of the APsystems EZ1 inverter is done by the [APsystems-EZ1-API](https://github.com/SonnenladenGmbH/APsystems-EZ1-API) documentation. Please follow the step by step instructions there.
 
 All relevant settings are done in the add-on Configuration page (see also [Configuration](#configuration)).
 

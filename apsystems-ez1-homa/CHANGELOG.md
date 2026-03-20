@@ -8,9 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
-## [1.0.0] - 2026-02-25
+## [1.0.0] - 2026-03-20
 - Ported to Home Assistant add-on
 - Updated to APsystemsEZ1 API 2.7.0
+- Migrated from https://github.com/hmueller01/APsystems-EZ1-mqtt to https://github.com/hass-hmueller01/addon-apsystems-ez1-homa
 
 ## [0.5.0] - 2025-06-07
 - Added support of daily energy info

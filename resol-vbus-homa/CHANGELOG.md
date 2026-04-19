@@ -7,6 +7,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+
+## [1.0.1] - 2026-04-19
 ### Changed
 - Replaced deprecated object_id by default_entity_id in homeassistant_config
 - Set LOG_TIMESTAMP to %Y-%m-%d %T

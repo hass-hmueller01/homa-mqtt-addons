@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-04-19
+- Replaced deprecated object_id with default_entity_id in Home Assistant discovery config
+
 ## [1.0.0] - 2026-03-20
 - Ported to Home Assistant add-on
 - Updated to APsystemsEZ1 API 2.7.0
